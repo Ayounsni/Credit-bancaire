@@ -1,11 +1,11 @@
-* {
-  color: azure;
-}
+@import 'variable';
 
-h1 {
-  color: rgb(208, 10, 10);
-}
+@import 'basics';
 
-a {
-  color: aqua;
-}
+@import 'component';
+
+
+
+
+
+

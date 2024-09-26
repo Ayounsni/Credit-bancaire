@@ -5,8 +5,8 @@
 }
 
 .margin-x {
-  margin-left: 280px;
-  margin-right: 280px;
+  margin-left: $margin;
+  margin-right: $margin;
 }
 
 .titre-center {
@@ -14,7 +14,7 @@
 }
 
 .m-t-lg {
-  margin-top: 100px;
+  margin-top: $moyen;
 }
 
 .w-75 {
@@ -24,15 +24,10 @@
 .w-20 {
   width: 20%;
 }
-
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
 }
 
-.card {
-  border-color: rgb(42, 24, 24);
-  border: 1px solid;
-}
+
