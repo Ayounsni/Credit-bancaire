@@ -302,6 +302,13 @@ input:focus {
   align-items: center;
 }
 
+.pret {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 8px;
+  margin-bottom: 30px;
+}
+
 .card {
   border-color: rgb(42, 24, 24);
   background-color: white;
