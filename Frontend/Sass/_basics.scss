@@ -241,6 +241,11 @@ input:focus {
 .m-b-6 {
   margin-bottom: 50px;
 }
+.mon {
+  font-size: 23px;
+  font-weight: 600;
+  margin: 17px 0px;
+}
 .button1 {
   background-color: $first;
   padding: 10px 20px;
@@ -249,6 +254,12 @@ input:focus {
   box-shadow:0px 5px 10px rgba(0, 0, 0, 0.4) ;
   cursor: pointer;
 
+}
+.bg1{
+  background-color: #F1F2F6;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 4px 8px;
 }
 .button1:hover {
   background-color: #028C96;
