@@ -289,7 +289,7 @@ input:focus {
   background-color: #F1F2F6;
   font-size: 16px;
   font-weight: 500;
-  padding: 4px 8px;
+  padding: 6px 8px;
 }
 
 .button1:hover {
@@ -306,7 +306,139 @@ input:focus {
   font-size: 14px;
   font-weight: 700;
   padding: 4px 8px;
+}
+
+.m-b-9 {
   margin-bottom: 30px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 9px 8px 4px 8px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+  color: #02AFBC;
+  font-weight: 500;
+  transition: border-color 0.3s ease;
+}
+
+.custom-input:focus {
+  border-bottom-color: #ccc;
+}
+
+.m-t-9 {
+  margin-top: 28px;
+}
+
+.custom-label {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #999;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.custom-input:focus + .custom-label,
+.custom-input:not(:placeholder-shown) + .custom-label {
+  top: -11px;
+  font-size: 14px;
+  color: #30435C;
+  font-weight: 600;
+}
+
+.custom-input::placeholder {
+  color: transparent;
+}
+
+.custom-input:focus::placeholder {
+  color: #999;
+}
+
+.custom-input:disabled {
+  background-color: #e0e0e0;
+  border-bottom: 0;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #DEE1E5;
+  padding: 6px 8px;
+}
+
+.fs2 {
+  font-size: 15px;
+}
+
+.fw {
+  font-weight: 600;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.radio-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.custom-radio {
+  position: relative;
+  cursor: pointer;
+  padding-left: 30px;
+  font-size: 16px;
+  margin: 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-radio input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-radio span.radio-label::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 4px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #30435C;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 10px;
+}
+
+.custom-radio input[type=radio]:checked + .radio-label::before {
+  border-color: #30435C;
+  background-color: #02AFBC;
+}
+
+.custom-radio input[type=radio]:checked + .radio-label {
+  color: #02AFBC;
 }
 
 .card {
