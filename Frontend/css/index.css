@@ -119,6 +119,12 @@ p {
   color: white;
 }
 
+.p-9 {
+  font-size: 17.1px;
+  font-weight: 700;
+  color: white;
+}
+
 .p-2 {
   font-size: 13px;
   font-weight: 500;
@@ -285,6 +291,24 @@ input:focus {
   cursor: pointer;
 }
 
+.button3 {
+  background-color: #02AFBC;
+  padding: 6px 15px;
+  border: #F1F2F6 3px solid;
+  border-radius: 4px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: #02AFBC;
+  padding: 16px 30px;
+  border: #F1F2F6 3px solid;
+  border-radius: 4px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
 .bg1 {
   background-color: #F1F2F6;
   font-size: 16px;
@@ -296,10 +320,19 @@ input:focus {
   background-color: #028C96;
 }
 
+.button2:hover {
+  background-color: #028C96;
+}
+
+.button3:hover {
+  background-color: #028C96;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 22px;
 }
 
 .pret {
@@ -310,6 +343,10 @@ input:focus {
 
 .m-b-9 {
   margin-bottom: 30px;
+}
+
+.m-b-10 {
+  margin-bottom: 80px;
 }
 
 .input-container {
@@ -334,7 +371,7 @@ input:focus {
 }
 
 .m-t-9 {
-  margin-top: 28px;
+  margin-top: 30px;
 }
 
 .custom-label {
@@ -373,8 +410,11 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #DEE1E5;
   padding: 6px 8px;
+}
+
+.border-b {
+  border-bottom: 1px solid #DEE1E5;
 }
 
 .fs2 {
@@ -386,59 +426,128 @@ input:focus {
 }
 
 .radio-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 20px;
+  margin-bottom: 15px;
+  padding: 3px 4px;
 }
 
 .radio-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 600;
+  margin-bottom: 7px;
+  display: block;
+  font-size: 14.5px;
+  color: #30435C;
 }
 
 .radio-group {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
+  gap: 17px;
 }
 
-.custom-radio {
-  position: relative;
+label {
   cursor: pointer;
-  padding-left: 30px;
-  font-size: 16px;
-  margin: 10px;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
-.custom-radio input[type=radio] {
-  position: absolute;
-  opacity: 0;
+.custom_field {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid #30435C;
+  margin-right: 4px;
 }
 
-.custom-radio span.radio-label::before {
+.custom_field::before {
   content: "";
   position: absolute;
-  left: 10px;
-  top: 4px;
-  width: 11px;
-  height: 11px;
-  border: 1px solid #30435C;
+  width: 6px;
+  height: 6px;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
-  background-color: #fff;
-  font-size: 10px;
+  transition: all 0.6s ease;
 }
 
-.custom-radio input[type=radio]:checked + .radio-label::before {
-  border-color: #30435C;
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio]:checked + .custom_field::before {
   background-color: #02AFBC;
 }
 
-.custom-radio input[type=radio]:checked + .radio-label {
+input[type=radio]:checked + .custom_field {
+  border-color: #02AFBC;
+}
+
+input[type=radio]:checked + .custom_field + span {
   color: #02AFBC;
+  font-weight: bold;
+}
+
+.fs1 {
+  font-size: 14px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 18px 0px;
+  border: 1px solid #888;
+  width: 500px;
+  border-radius: 0.375rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.p-5 {
+  padding: 0px 15px;
+}
+
+.erreur {
+  width: 93%;
+  background-color: #FBD0D5;
+  border: 1px solid #F9BDC4;
+  margin-bottom: 18px;
+  border-radius: 0.375rem;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.error-list {
+  color: #7A0A17;
 }
 
 .card {
